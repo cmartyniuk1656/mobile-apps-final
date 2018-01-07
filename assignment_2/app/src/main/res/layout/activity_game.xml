@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.chrismartyniuk.assignment_2.Game"
+    android:background="@color/colorPrimaryDark">
+
+    <TextView
+        android:id="@+id/dealerLbl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView2"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/textView2"
+        android:text="Dealer"
+        android:textColor="@android:color/darker_gray"
+        tools:layout_editor_absoluteX="156dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="11dp"
+        android:text="Player"
+        android:textColor="@android:color/darker_gray"
+        tools:layout_editor_absoluteX="157dp"
+        tools:layout_editor_absoluteY="573dp" />
+
+    <Button
+        android:id="@+id/hitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/playerCardOneTxt"
+        android:layout_marginBottom="113dp"
+        android:layout_toLeftOf="@+id/textView2"
+        android:layout_toStartOf="@+id/textView2"
+        android:onClick="playerHit"
+        android:text="Hit"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="260dp" />
+
+    <Button
+        android:id="@+id/stayBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/hitBtn"
+        android:layout_alignBottom="@+id/hitBtn"
+        android:layout_alignLeft="@+id/playerCardThreeTxt"
+        android:layout_alignStart="@+id/playerCardThreeTxt"
+        android:layout_marginLeft="7dp"
+        android:layout_marginStart="7dp"
+        android:onClick="playerStay"
+        android:text="Stay"
+        tools:layout_editor_absoluteX="196dp"
+        tools:layout_editor_absoluteY="260dp" />
+
+    <TextView
+        android:id="@+id/playerCardOneTxt"
+        android:layout_width="60dp"
+        android:layout_height="90dp"
+        android:layout_above="@+id/textView2"
+        android:layout_marginBottom="71dp"
+        android:layout_toLeftOf="@+id/playerCardTwoTxt"
+        android:layout_toStartOf="@+id/playerCardTwoTxt"
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/playerCardTwoTxt"
+        android:layout_width="60dp"
+        android:layout_height="90dp"
+        android:layout_alignBaseline="@+id/playerCardOneTxt"
+        android:layout_alignBottom="@+id/playerCardOneTxt"
+        android:layout_alignEnd="@+id/hitBtn"
+        android:layout_alignRight="@+id/hitBtn"
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/playerCardThreeTxt"
+        android:layout_width="60dp"
+        android:layout_height="90dp"
+        android:layout_alignTop="@+id/playerCardTwoTxt"
+        android:layout_toEndOf="@+id/dealerLbl"
+        android:layout_toRightOf="@+id/dealerLbl"
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/playerCardFourTxt"
+        android:layout_width="60dp"
+        android:layout_height="90dp"
+        android:layout_alignTop="@+id/playerCardThreeTxt"
+        android:layout_toEndOf="@+id/playerCardThreeTxt"
+        android:layout_toRightOf="@+id/playerCardThreeTxt"
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/dealerCardOneTxt"
+        android:layout_width="60dp"
+        android:layout_height="90dp"
+        android:layout_alignLeft="@+id/playerCardOneTxt"
+        android:layout_alignStart="@+id/playerCardOneTxt"
+        android:layout_below="@+id/dealerLbl"
+        android:layout_marginTop="54dp"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/dealerCardTwoTxt"
+        android:layout_width="60dp"
+        android:layout_height="90dp"
+        android:layout_alignBaseline="@+id/dealerCardOneTxt"
+        android:layout_alignBottom="@+id/dealerCardOneTxt"
+        android:layout_toEndOf="@+id/dealerCardOneTxt"
+        android:layout_toRightOf="@+id/dealerCardOneTxt"
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/dealerCardThreeTxt"
+        android:layout_width="60dp"
+        android:layout_height="90dp"
+        android:layout_alignTop="@+id/dealerCardTwoTxt"
+        android:layout_toEndOf="@+id/textView2"
+        android:layout_toRightOf="@+id/textView2"
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/dealerCardFourTxt"
+        android:layout_width="60dp"
+        android:layout_height="90dp"
+        android:layout_alignTop="@+id/dealerCardThreeTxt"
+        android:layout_toEndOf="@+id/dealerCardThreeTxt"
+        android:layout_toRightOf="@+id/dealerCardThreeTxt"
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/outcomeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stayBtn"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/playBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/outcomeTxt"
+        android:layout_centerHorizontal="true"
+        android:onClick="startGame"
+        android:text="Play" />
+
+    <TextView
+        android:id="@+id/playerMoneyTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/playerCardOneTxt"
+        android:layout_alignStart="@+id/playerCardOneTxt"
+        android:layout_below="@+id/playerCardTwoTxt"
+        android:layout_marginTop="15dp"
+        android:layout_toLeftOf="@+id/textView2"
+        android:layout_toStartOf="@+id/textView2"
+        android:text="$"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="30dp" />
+
+
+</RelativeLayout>

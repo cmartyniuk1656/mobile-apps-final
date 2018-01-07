@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">assignment_2</string>
+    <string name="blackjack">Blackjack</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="passwordtxt">Password</string>
+    <string name="create_account">Create Account</string>
+    <string name="wins">Wins</string>
+    <string name="losses">Losses</string>
+    <string name="money">Money</string>
+</resources>

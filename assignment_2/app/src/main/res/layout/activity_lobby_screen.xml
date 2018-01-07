@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.chrismartyniuk.assignment_2.LobbyScreen">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:id="@+id/asynchLbl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/titleLbl"
+            android:fontFamily="monospace"
+            android:text="(Asynch Changing Text)"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_green_light"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/titleLbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="31dp"
+            android:fontFamily="cursive"
+            android:text="Final Project"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_green_light"
+            android:textSize="50sp" />
+
+        <Button
+            android:id="@+id/playBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="180dp"
+            android:onClick="playGame"
+            android:text="Play" />
+
+        <Button
+            android:id="@+id/statsBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/playBtn"
+            android:layout_alignStart="@+id/playBtn"
+            android:layout_below="@+id/playBtn"
+            android:layout_marginTop="24dp"
+            android:onClick="checkStats"
+            android:text="Stats" />
+
+        <Button
+            android:id="@+id/asynchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/statsBtn"
+            android:layout_marginEnd="14dp"
+            android:layout_marginRight="14dp"
+            android:layout_marginTop="20dp"
+            android:layout_toLeftOf="@+id/statsBtn"
+            android:layout_toStartOf="@+id/statsBtn"
+            android:onClick="updateAsynchText"
+            android:text="Asynch" />
+
+        <Button
+            android:id="@+id/inputStreamBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/asynchBtn"
+            android:layout_toEndOf="@+id/asynchBtn"
+            android:layout_toRightOf="@+id/asynchBtn"
+            android:onClick="goToInputStreamActivity"
+            android:text="I Stream" />
+
+        <Button
+            android:id="@+id/contactBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/inputStreamBtn"
+            android:layout_marginLeft="17dp"
+            android:layout_marginStart="17dp"
+            android:layout_toEndOf="@+id/inputStreamBtn"
+            android:layout_toRightOf="@+id/inputStreamBtn"
+            android:onClick="contactBtnIntent"
+            android:text="SMS" />
+
+        <Button
+            android:id="@+id/phontBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/asynchBtn"
+            android:layout_alignStart="@+id/asynchBtn"
+            android:layout_below="@+id/asynchBtn"
+            android:layout_marginTop="16dp"
+            android:onClick="phoneBtnIntent"
+            android:text="Phone" />
+    </RelativeLayout>
+
+</ScrollView>
