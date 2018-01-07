@@ -41,6 +41,8 @@
             android:label="Input Stream Example"
             android:parentActivityName=".LobbyScreen">
         </activity>
+
+        <service android:name=".ExamIntentService" />
     </application>
 
 </manifest>

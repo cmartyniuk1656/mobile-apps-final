@@ -1,6 +1,7 @@
 package com.chrismartyniuk.assignment_2;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.ProgressDialog;
@@ -109,9 +110,12 @@ public class LobbyScreen extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @SuppressLint("MissingPermission")
     public void phoneBtnIntent(View view) {
 
         Intent intent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:" + "1231231234"));
+
+        //Permissions have already been determined
         startActivity(intent);
 
     }
@@ -128,6 +132,11 @@ public class LobbyScreen extends AppCompatActivity {
         };
         int requestCode = 200;
         requestPermissions(permissions, requestCode);
+    }
+
+    public void callService(View view) {
+        Intent msgIntent = new Intent(this, ExamIntentService.class);
+        startService(msgIntent);
     }
 }
 

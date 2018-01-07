@@ -79,7 +79,7 @@
             android:layout_toEndOf="@+id/asynchBtn"
             android:layout_toRightOf="@+id/asynchBtn"
             android:onClick="goToInputStreamActivity"
-            android:text="I Stream" />
+            android:text="IO Stream" />
 
         <Button
             android:id="@+id/contactBtn"
@@ -103,6 +103,16 @@
             android:layout_marginTop="16dp"
             android:onClick="phoneBtnIntent"
             android:text="Phone" />
+
+        <Button
+            android:id="@+id/serviceBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/phontBtn"
+            android:layout_toEndOf="@+id/asynchBtn"
+            android:layout_toRightOf="@+id/asynchBtn"
+            android:onClick="callService"
+            android:text="Service" />
     </RelativeLayout>
 
 </ScrollView>
